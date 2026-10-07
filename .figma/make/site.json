@@ -1,0 +1,10 @@
+{
+  "description": "Explore the rich cultural heritage of Durga Pujo artisans through detailed profiles, folk stories, idol styles, and an extensive artist archive with multimedia content.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

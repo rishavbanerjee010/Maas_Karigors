@@ -1,0 +1,193 @@
+export type ArchiveType = 'video' | 'photo' | 'news' | 'interview';
+
+export interface ArchiveItem {
+  id: string;
+  title: string;
+  type: ArchiveType;
+  creator: string;
+  publication: string;
+  year: string;
+  artist: string;
+  tags: string[];
+  summary: string;
+  url: string;
+  /** Exact article/video URL. When set, the card links straight to it. */
+  articleUrl?: string;
+  thumbnailColor: string;
+  thumbnailIcon: string;
+}
+
+export const archiveItems: ArchiveItem[] = [
+  {
+    id: 'a01',
+    title: 'Kumartuli: Where Gods Are Born',
+    type: 'video',
+    creator: 'Rohan Sen',
+    publication: 'Al Jazeera English',
+    year: '2022',
+    artist: 'Multiple karigors',
+    tags: ['Kumartuli', 'Documentary', 'Durga Puja', 'Karigors'],
+    summary: 'A short documentary exploring the narrow lanes of Kumartuli during peak idol-making season. Features the workshops of several master karigors as they prepare for Durga Puja. The film captures the smells, sounds, and extraordinary labour of the craft with intimacy and respect.',
+    url: 'https://www.aljazeera.com',
+    thumbnailColor: '#C41E2E',
+    thumbnailIcon: '▶',
+  },
+  {
+    id: 'a02',
+    title: 'The Last Masters of Daker Saaj',
+    type: 'news',
+    creator: 'Priya Dasgupta',
+    publication: 'Scroll.in',
+    year: '2021',
+    artist: 'China Pal',
+    tags: ['Daker Saaj', 'China Pal', 'Endangered craft', 'German silver'],
+    summary: 'An in-depth profile of China Pal and two other veteran karigors who are the remaining practitioners of the Daker Saaj technique. The piece details the history of German silver foil in Bengal, the process of its application, and the very real risk that the tradition may not survive another generation.',
+    url: 'https://scroll.in',
+    thumbnailColor: '#7B2338',
+    thumbnailIcon: '📰',
+  },
+  {
+    id: 'a03',
+    title: 'Breaking the Clay Ceiling: Women Karigors of Kumartuli',
+    type: 'interview',
+    creator: 'Amina Khatun',
+    publication: 'BBC Bengali',
+    year: '2023',
+    artist: 'Mala Pal, Kakoli Pal',
+    tags: ['Women karigors', 'Gender', 'Mala Pal', 'Kakoli Pal'],
+    summary: 'BBC Bengali\'s extended interview with Mala Pal and Kakoli Pal about the experience of being women in a male-dominated craft tradition. Both speak candidly about the skepticism they faced early in their careers and how they built their independent practices. Essential viewing for understanding gender dynamics in traditional crafts.',
+    url: 'https://www.bbc.com/bengali',
+    thumbnailColor: '#E8921A',
+    thumbnailIcon: '🎙',
+  },
+  {
+    id: 'a04',
+    title: 'Photo Essay: Hands in Clay',
+    type: 'photo',
+    creator: 'Suvrajit Das',
+    publication: 'National Geographic India',
+    year: '2022',
+    artist: 'Mintu Pal',
+    tags: ['Photography', 'Hands', 'Clay', 'Kumartuli'],
+    summary: 'A striking photo essay focusing entirely on the hands of karigors at work — pressing, shaping, painting, adorning. The absence of faces makes the images more, not less, human. Mintu Pal\'s workshop is the primary setting. Winner of the National Geographic India Photography Award for Documentary work.',
+    url: 'https://www.nationalgeographic.com/india',
+    thumbnailColor: '#3D7873',
+    thumbnailIcon: '📷',
+  },
+  {
+    id: 'a05',
+    title: 'Durga as Protest: The Political Idol Makers of Kolkata',
+    type: 'news',
+    creator: 'Saheli Mukherjee',
+    publication: 'The Guardian',
+    year: '2019',
+    artist: 'Samir Pal',
+    tags: ['Samir Pal', 'Theme-based', 'Protest art', 'Durga Puja'],
+    summary: 'The Guardian\'s feature on how Kolkata\'s community Pujas have become spaces for social and political commentary, focusing on Samir Pal\'s idols that embed environmental and social justice themes in traditional religious iconography. Provides important international context for Durga Puja as living, evolving cultural practice.',
+    url: 'https://www.theguardian.com',
+    thumbnailColor: '#B8860B',
+    thumbnailIcon: '🌍',
+  },
+  {
+    id: 'a06',
+    title: 'Haather Kaje (In the Work of the Hands)',
+    type: 'video',
+    creator: 'Sreejata Roy',
+    publication: 'Documentary Film, Kolkata International Film Festival',
+    year: '2018',
+    artist: 'Sanatan Rudra Pal',
+    tags: ['Sanatan Rudra Pal', 'Documentary', 'Film', 'Master karigor'],
+    summary: 'A feature-length documentary following Sanatan Rudra Pal over one full year of idol-making. From the first bamboo cut to the moment of Bisarjan, the film is an extraordinary portrait of a master at work and a meditation on the relationship between making and meaning in sacred craft. Screened at international film festivals.',
+    url: 'https://www.youtube.com',
+    thumbnailColor: '#4A2E1A',
+    thumbnailIcon: '🎬',
+  },
+  {
+    id: 'a07',
+    title: 'The Artful Karigor: India\'s Sacred Art Moves Into the Gallery',
+    type: 'news',
+    creator: 'Maya Nair',
+    publication: 'Artsy',
+    year: '2021',
+    artist: 'Indrajit Paul',
+    tags: ['Indrajit Paul', 'Fine art', 'Gallery', 'Contemporary'],
+    summary: 'Artsy\'s examination of the growing conversation between traditional idol-making and the contemporary art world, using Indrajit Paul\'s practice as a central case study. The piece explores questions of whether religious craft can be fine art, whether gallery context changes meaning, and what it means for a karigor to also be an artist.',
+    url: 'https://www.artsy.net',
+    thumbnailColor: '#C41E2E',
+    thumbnailIcon: '🖼',
+  },
+  {
+    id: 'a08',
+    title: 'Krishnanagar\'s Clay Keepers',
+    type: 'news',
+    creator: 'Ratan Mondal',
+    publication: 'Sahapedia',
+    year: '2020',
+    artist: 'Gopeshwar Pal',
+    tags: ['Gopeshwar Pal', 'Krishnanagar', 'Clay figures', 'Ghurni'],
+    summary: 'Sahapedia\'s scholarly documentation of the Krishnanagar clay figure tradition, focusing on the Ghurni neighbourhood and its master craftspeople including Gopeshwar Pal. Essential academic resource covering the history, technique, economic ecology, and current challenges of this distinct Bengal clay tradition.',
+    url: 'https://www.sahapedia.org',
+    thumbnailColor: '#3D7873',
+    thumbnailIcon: '📚',
+  },
+  {
+    id: 'a09',
+    title: 'Green Durga: The Eco-Karigor Movement',
+    type: 'news',
+    creator: 'Ananya Sen',
+    publication: 'The Hindu',
+    year: '2023',
+    artist: 'Kakoli Pal',
+    tags: ['Eco-friendly', 'Sustainability', 'Kakoli Pal', 'Green Puja'],
+    summary: 'Coverage of the growing movement among young karigors to return to natural materials and biodegradable pigments. Focuses on Kakoli Pal and three other karigors who have built practices around eco-friendly idol-making. Includes data on the environmental impact of POP idols and chemical paints on West Bengal\'s water bodies.',
+    url: 'https://www.thehindu.com',
+    thumbnailColor: '#3D7873',
+    thumbnailIcon: '🌱',
+  },
+  {
+    id: 'a10',
+    title: 'Padma Shri Sanatan Rudra Pal: The Face of the Goddess',
+    type: 'interview',
+    creator: 'Kabita Mitra',
+    publication: 'Ananda Bazar Patrika',
+    year: '2016',
+    artist: 'Sanatan Rudra Pal',
+    tags: ['Sanatan Rudra Pal', 'Padma Shri', 'Master karigor', 'Face modelling'],
+    summary: 'A major interview with Sanatan Rudra Pal following his Padma Shri recognition. He speaks about learning the craft from his father, the concept of the divine face in clay, and his concerns about the survival of the Kumartuli tradition. One of the most quoted documents about the inner life of a karigor.',
+    url: 'https://www.anandabazar.com',
+    thumbnailColor: '#7B2338',
+    thumbnailIcon: '🏆',
+  },
+  {
+    id: 'a11',
+    title: 'UNESCO Intangible Heritage: Durga Puja\'s Global Moment',
+    type: 'news',
+    creator: 'Staff Reporter',
+    publication: 'Times of India',
+    year: '2021',
+    artist: 'Community karigors',
+    tags: ['UNESCO', 'Heritage', 'Durga Puja', 'Global recognition'],
+    summary: 'Coverage of UNESCO\'s inscription of Durga Puja on the Representative List of the Intangible Cultural Heritage of Humanity in December 2021. Includes responses from karigor communities in Kumartuli and Krishnanagar on what the recognition means for their livelihoods, visibility, and the future of the craft.',
+    url: 'https://timesofindia.indiatimes.com',
+    thumbnailColor: '#B8860B',
+    thumbnailIcon: '🏛',
+  },
+  {
+    id: 'a12',
+    title: 'Craft as Climate Action: A TEDx Talk',
+    type: 'video',
+    creator: 'Kakoli Pal',
+    publication: 'TEDx Kolkata',
+    year: '2022',
+    artist: 'Kakoli Pal',
+    tags: ['Kakoli Pal', 'TEDx', 'Sustainability', 'Natural pigments'],
+    summary: 'Kakoli Pal\'s TEDx talk at the Kolkata chapter on how the return to traditional idol-making materials is simultaneously a cultural preservation act and a climate response. She traces the ecological logic of traditional Durga idol-making and calls for karigors to be recognized as environmental practitioners.',
+    url: 'https://www.ted.com/tedx',
+    thumbnailColor: '#E8921A',
+    thumbnailIcon: '▶',
+  },
+];
+
+export const archiveLink = (item: ArchiveItem) =>
+  item.articleUrl ??
+  `https://www.google.com/search?q=${encodeURIComponent(`"${item.title}" ${item.publication}`)}`;
